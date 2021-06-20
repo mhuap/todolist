@@ -8,6 +8,7 @@ const bodyParser = require('body-parser') // middleware for parsing HTTP body fr
 const app = express();
 
 const mongoose = require("./mongoose")
+mongoose();
 
 const User = require('./models/user')
 const Task = require('./models/task')
