@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>To-do List</title>
+  <meta name="description" content="To-do list app">
+  <meta name="author" content="Matias Huapaya">
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+  <div class='container'>
+    <div>
+      <div class='list-top-bar'>
+        <span id='list-username'></span>
+        <a href='/logout'>logout</a>
+      </div>
+      <h1 id='list-header'>To-do List</h1>
+      <form class='list-add' method='POST' action='/add'>
+        <input type='text' name='text' placeholder="Write a new task">
+        <button type='submit'>+</button>
+      </form>
+      <div id='list-list'>
+        <!-- <div class='list-item'>
+          <input type='checkbox'/>
+          <label>item 1 here</label>
+          <a>delete</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

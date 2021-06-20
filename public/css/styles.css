@@ -1,0 +1,105 @@
+/*
+purple: #4c65fc
+blue: #01beff
+green: #01eb9e
+red: #d40035
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #6e6d7a;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  font-family: 'Inter', sans-serif;
+}
+
+.container > div {
+  width: 400px;
+}
+
+/* List */
+
+h1 {
+  color: black;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+form.list-add {
+  border-radius: 12px;
+  padding: 12px 16px;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+}
+
+form.list-add button {
+  border: none;
+  background-color: white;
+  color: #4C65FC;
+  font-size: 32px;
+  line-height: 0;
+  height: 40px;
+  /* padding: 0 16px; */
+  width: 40px;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.list-add input[type='text'] {
+  border: none;
+  width: 80%;
+  background: none;
+}
+
+.list-add input[type='text']:focus {
+  outline: none;
+}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#list-header {
+  position: relative;
+  top: 40px;
+}
+
+.list-top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-top-bar a {
+  color: #4C65FC;
+  text-decoration: none;
+}
+
+.list-item {
+  display: flex;
+}
+
+.list-item:before {
+  content: '';
+}
+
+.list-item label {
+  flex-grow: 1;
+}
+
+.list-item .delete {
+  color: #d40035
+}
