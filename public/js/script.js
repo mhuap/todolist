@@ -19,9 +19,10 @@ function createTasks(tasks) {
     const label = document.createElement("label");
     label.setAttribute('for', 'checkbox'+iString);
     label.setAttribute('data-taskId', tasks[i]._id);
-    const del = document.createElement("a")
-    del.innerText = "delete"
-    del.className = "delete"
+    const span = document.createElement("span");
+    const del = document.createElement("a");
+    del.innerText = "delete";
+    del.className = "delete";
 
     del.addEventListener("click", function() {
       const id = this.parentElement.getElementsByTagName('label')[0].getAttribute('data-taskId');
@@ -38,8 +39,9 @@ function createTasks(tasks) {
     } else {
       checkbox.checked = false;
     }
-    label.innerText = tasks[i].text;
+    span.innerText = tasks[i].text;
 
+    label.appendChild(span)
     item.appendChild(checkbox)
     item.appendChild(label)
     item.appendChild(del)
