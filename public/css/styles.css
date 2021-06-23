@@ -3,9 +3,18 @@ purple: #4c65fc
 blue: #01beff
 green: #01eb9e
 red: #d40035
+black: #2F2E41
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@font-face {
+  font-family: "LuloClean";
+  src: url("../fonts/LuloClean/LuloClean.eot");
+  src: url("../fonts/LuloClean/LuloClean.woff") format("woff"),
+  url("../fonts/LuloClean/LuloClean.otf") format("opentype"),
+  url("../fonts/LuloClean/LuloClean.svg#filename") format("svg");
+}
 
 body {
   margin: 0;
@@ -17,24 +26,46 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
   font-family: 'Inter', sans-serif;
+  height: 100vh;
 }
 
 .container > div {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
-/* List */
+.content {
+  padding: 0 16px;
+}
 
 h1 {
-  color: black;
+  color: #2F2E41;
   text-align: center;
+  font-family: 'LuloClean', sans-serif;
 }
 
 button {
   cursor: pointer;
+  border: none;
+  height: 42px;
+  border-radius: 18px;
 }
+
+form input[type='text'], form input[type='password'] {
+  border: none;
+  border-bottom: blue solid 1px;
+  display: block;
+  margin: 8px 0 16px 0;
+  width: 250px;
+  font-size: 16px;
+}
+
+form input[type='text']:focus, form input[type='password']:focus {
+  outline: none;
+}
+
+/* List ------------------------------------ */
 
 form.list-add {
   border-radius: 12px;
@@ -45,7 +76,6 @@ form.list-add {
 }
 
 form.list-add button {
-  border: none;
   background-color: white;
   color: #4C65FC;
   font-size: 32px;
@@ -55,30 +85,18 @@ form.list-add button {
   width: 40px;
   text-align: center;
   border-radius: 16px;
+  border: 1px solid #4C65FC;
 }
 
 .list-add input[type='text'] {
   border: none;
   width: 80%;
   background: none;
-}
-
-.list-add input[type='text']:focus {
-  outline: none;
-}
-
-.list-item {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-}
-
-#list-header {
-  position: relative;
-  top: 40px;
+  margin: 0;
 }
 
 .list-top-bar {
+  margin-top: 16px;
   display: flex;
   justify-content: space-between;
 }
@@ -89,17 +107,45 @@ form.list-add button {
 }
 
 .list-item {
+  width: 100%;
   display: flex;
-}
-
-.list-item:before {
-  content: '';
+  justify-content: flex-start;
+  padding: 8px 0;
 }
 
 .list-item label {
   flex-grow: 1;
+  padding-left: 8px;
+}
+
+.list-item input[type='checkbox']:checked ~ label {
+  text-decoration: line-through;
 }
 
 .list-item .delete {
   color: #d40035
+}
+
+/* LOGIN/SIGNUP */
+
+.login, .signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
+
+.login form, .signup form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login button, .signup button {
+  width: 250px;
+  background: linear-gradient(90deg, hsla(195, 100%, 50%, 1) 0%, hsla(231, 97%, 64%, 1) 100%);
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 16px;
 }

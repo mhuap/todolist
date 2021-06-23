@@ -5,6 +5,7 @@
   <title>To-do List</title>
   <meta name="description" content="To-do list app">
   <meta name="author" content="Matias Huapaya">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -12,12 +13,12 @@
 
 <body>
   <div class='container'>
-    <div>
+    <div class='content'>
       <div class='list-top-bar'>
         <span id='list-username'></span>
         <a href='/logout'>logout</a>
       </div>
-      <h1 id='list-header'>To-do List</h1>
+      <h2 id='list-header'>To-do List</h1>
       <form class='list-add' method='POST' action='/add'>
         <input type='text' name='text' placeholder="Write a new task">
         <button type='submit'>+</button>

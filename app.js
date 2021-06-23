@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({ extended:true }));
 app.use(express.static(path.join(__dirname,"/public")));
 app.use("/list/css", express.static(__dirname + '/public/css'));
 app.use("/list/js", express.static(__dirname + '/public/js'));
+app.use("/list/fonts", express.static(__dirname + '/public/fonts'));
 
 app.use(session({
   secret: 'shhsecret',
